@@ -1,4 +1,5 @@
-/*es-lint-disable*/
+/* es-lint-disable */
+
 export default function getResponseFromAPI() {
-    return new Promise((resove, reject) => {});
+  return new Promise(() => {});
 }
