@@ -3,7 +3,7 @@ namespace Subjects {
         experienceTeachingJava?: number;
     }
 
-    class React extends Subject {
+    export class Java extends Subject {
         getRequirements(): string {
             return 'Here is the list of requirements for React'
         }
