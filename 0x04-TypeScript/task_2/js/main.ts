@@ -37,16 +37,18 @@ export function executeWork(employee: DirectorInterface | TeacherInterface): str
   (isDirector(employee)) ? res = employee.workDirectorTasks() : res = employee.workTeacherTasks();
   return res;
 }
-  type Subjects = "Math" | "History";
+
+//String literal types
+type Subjects = "Math" | "History";
   
-  export function teachClass(todayClass: Subjects): string {
-    if (todayClass === "Math") {
-      return "Teaching Math";
-    } else if (todayClass === "History") {
-      return "Teaching History";
-    }
+export function teachClass(todayClass: Subjects): string {
+  if (todayClass === "Math") {
+    return "Teaching Math";
+  } else if (todayClass === "History") {
+    return "Teaching History";
+  }
   }
   
-  console.log(teachClass("Math"));
-  console.log(teachClass("History"));
+console.log(teachClass("Math"));
+console.log(teachClass("History"));
 
