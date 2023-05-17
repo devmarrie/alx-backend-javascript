@@ -5,7 +5,7 @@ function countStudents(fileName) {
     const data = fs.readFileSync(fileName, 'utf-8');
     const lines = data.split('\n');
     const header = lines[0].split(',');
-    const rows = lines.length;
+    const rows = lines.length - 1;
     const fieldIndex = header.indexOf('field');
     const studentByField = {};
 
