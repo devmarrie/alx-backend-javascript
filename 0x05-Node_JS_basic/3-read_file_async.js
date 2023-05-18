@@ -11,8 +11,9 @@ function countStudents(path) {
         const rows = lines.length - 1;
         const fieldIndex = header.indexOf('field');
         const studentByField = {};
+        const output = [];
 
-        console.log(`Number of students: ${rows}`);
+        output.push(`Number of students: ${rows}`);
         for (let i = 1; i < lines.length; i += 1) {
           const values = lines[i].split(',');
 
@@ -28,9 +29,10 @@ function countStudents(path) {
 
         for (const [key, value] of Object.entries(studentByField)) {
           const studentCount = value.length;
-          console.log(`Number of students in ${key}: ${studentCount}. List: ${value.join(', ')}`);
+          output.push(`Number of students in ${key}: ${studentCount}. List: ${value.join(', ')}`);
         }
-        resolve(data);
+        console.log(output.join('\n'));
+        resolve(output.join('\n'));
       }
     });
   });
