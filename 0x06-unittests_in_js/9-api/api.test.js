@@ -28,7 +28,7 @@ describe('Testing express home route', function() {
 });
 
 describe('Adding a new test suite for the cart page', function() {
-  it('should check the status code when id is a number', function() {
+  it('should check the status code when id is a number', function(done) {
     const url = 'http://localhost:7865/cart/123';
     request(url, (err, res, body) => {
       expect(res.statusCode).to.equal(200);
@@ -36,7 +36,7 @@ describe('Adding a new test suite for the cart page', function() {
     });
   });
 
-  it('should check status code when not  number', function() {
+  it('should check status code when not number', function(done) {
     const url = 'http://localhost:7865/cart/qwerty';
     request(url, (err, res, body) => {
       expect(res.statusCode).to.equal(404);
