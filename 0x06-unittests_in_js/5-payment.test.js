@@ -13,13 +13,13 @@ describe('Hooks', function() {
 
   it('should return a total of 120', function() {
     sendPaymentRequestToApi(100, 20);
-    sinon.assert.calledWith(consoleSpy, 'The total is:120');
+    sinon.assert.calledWith(consoleSpy, 'The total is: 120');
     sinon.assert.calledOnce(consoleSpy);
   })
 
   it('should return a total of 20', function() {
     sendPaymentRequestToApi(10, 10);
-    sinon.assert.calledWith(consoleSpy, 'The total is:20');
+    sinon.assert.calledWith(consoleSpy, 'The total is: 20');
     sinon.assert.calledOnce(consoleSpy);
   })
 
