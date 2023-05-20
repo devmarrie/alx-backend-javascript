@@ -36,13 +36,13 @@ describe('Adding a new test suite for the cart page', function() {
     });
   });
 
-  it('should have correct results when id is called', function(done) {
-    const url = 'http://localhost:7865/cart/123';
+  it("should have correct results when id is called", function (done) {
+    const url = "http://localhost:7865/cart/123";
     request(url, (err, res, body) => {
       if (err) throw err;
-      expect(body).to.contain('Payment methods for cart 123')
+      expect(body).to.contain("Payment methods for cart 123");
       done();
-      });
+    });
   });
 
   it('should check status code when not number', function(done) {
